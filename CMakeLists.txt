@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(fix-engine-equities-prod-observed CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS "-O3 -march=native -Wpedantic -Wall -Wextra")
+add_executable(fix_observed src/main_observed.cpp)
+target_link_libraries(fix_observed pthread rt)
